@@ -16,7 +16,7 @@ public class QaClearquote_baseclass {
         caps.setCapability("platformName", "Android");
         caps.setCapability("deviceName", "emulator-5554");
         caps.setCapability("appPackage", "io.clearquote.assessment");
-        caps.setCapability("appActivity", ".MainActivity");
+        caps.setCapability("appActivity", "io.MainActivity");
         caps.setCapability("automationName", "UiAutomator2");
 
         driver = new AndroidDriver(new URL("driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)"), caps);
