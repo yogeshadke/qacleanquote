@@ -13,15 +13,16 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
     AppiumDriver driver;
 
+    @AndroidFindBy(id = "inspection_icon")
+    WebElement inspectionIcon;
+
     public HomePage(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.clearquote.assessment:id/inspection")
-    private WebElement inspectionButton;
-
-    public void startInspection() {
-        inspectionButton.click();
+    public void navigateToInspection() {
+        inspectionIcon.click();
     }
 }
+

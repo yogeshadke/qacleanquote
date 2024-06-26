@@ -10,46 +10,51 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class InspectionPage {
-    AppiumDriver driver;
+     AppiumDriver driver;
+
+    @AndroidFindBy(id = "license_plate")
+     WebElement licensePlate;
+
+    @AndroidFindBy(id = "next_button")
+     WebElement nextButton;
+
+    @AndroidFindBy(id = "vehicle_make")
+     WebElement vehicleMake;
+
+    @AndroidFindBy(id = "vehicle_model")
+     WebElement vehicleModel;
+
+    @AndroidFindBy(id = "capture_image_button")
+     WebElement captureImageButton;
+
+    @AndroidFindBy(id = "ok_button")
+     WebElement okButton;
+
+    @AndroidFindBy(id = "complete_inspection_button")
+     WebElement completeInspectionButton;
 
     public InspectionPage(AppiumDriver driver) {
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(id = "com.clearquote.assessment:id/licensePlate")
-    WebElement licensePlateField;
-
-    @AndroidFindBy(id = "com.clearquote.assessment:id/next")
-     WebElement nextButton;
-
-    @AndroidFindBy(id = "com.clearquote.assessment:id/make")
-     WebElement vehicleMakeField;
-
-    @AndroidFindBy(id = "com.clearquote.assessment:id/model")
-     WebElement vehicleModelField;
-
-    @AndroidFindBy(id = "com.clearquote.assessment:id/captureFrontView")
-     WebElement captureFrontViewButton;
-
-    @AndroidFindBy(id = "com.clearquote.assessment:id/okay")
-     WebElement okayButton;
-
     public void enterLicensePlate(String plate) {
-       licensePlateField.sendKeys(plate);
-    	
-         nextButton.click();
+        licensePlate.sendKeys(plate);
+        nextButton.click();
     }
 
     public void selectVehicleDetails() {
-        vehicleMakeField.sendKeys("Maruti Suzuki");
-        vehicleModelField.sendKeys("ALTO");
+        vehicleMake.sendKeys("Maruti Suzuki");
+        vehicleModel.sendKeys("ALTO");
         nextButton.click();
     }
 
-    public void captureFrontView() {
-        captureFrontViewButton.click();
-        okayButton.click();
-        nextButton.click();
+    public void captureFrontViewImage() {
+        captureImageButton.click();
+        okButton.click();
+    }
+
+    public void completeInspection() {
+        completeInspectionButton.click();
     }
 }

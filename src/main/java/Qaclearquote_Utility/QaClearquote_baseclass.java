@@ -9,9 +9,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class QaClearquote_baseclass {
-    protected AppiumDriver driver;
+    protected static AppiumDriver driver;
 
-    public void setup() throws MalformedURLException {
+    public static void setup() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
         caps.setCapability("deviceName", "emulator-5554");
@@ -19,7 +19,7 @@ public class QaClearquote_baseclass {
         caps.setCapability("appActivity", ".MainActivity");
         caps.setCapability("automationName", "UiAutomator2");
 
-        driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), caps);
+        driver = new AndroidDriver(new URL("driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)"), caps);
     }
 
     public void teardown() {
@@ -27,4 +27,6 @@ public class QaClearquote_baseclass {
             driver.quit();
         }
     }
+
+	
 }

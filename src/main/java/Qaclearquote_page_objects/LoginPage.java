@@ -1,35 +1,34 @@
 package Qaclearquote_page_objects;
 
 import io.appium.java_client.AppiumDriver;
-
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
+
 
 public class LoginPage {
-    @SuppressWarnings("unused")
-	private AppiumDriver driver;
+    AppiumDriver driver;
 
-    @CacheLookup
-    private WebElement userIdField;
+    @AndroidFindBy(id = "user_id")
+    WebElement userId;
 
-    @CacheLookup
-    private WebElement passwordField;
+    @AndroidFindBy(id = "password")
+     WebElement password;
 
-    @CacheLookup
-    private WebElement loginButton;
+    @AndroidFindBy(id = "login_button")
+     WebElement loginButton;
 
-    public LoginPage(AppiumDriver driver2) {
-        this.driver = driver2;
-        PageFactory.initElements(new AppiumFieldDecorator(driver2), this);
+    public LoginPage(AppiumDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void login(String userId, String password) {
-        userIdField.sendKeys(userId);
-        passwordField.sendKeys(password);
+    public void login(String user, String pass) {
+        userId.sendKeys(user);
+        password.sendKeys(pass);
         loginButton.click();
+        
     }
 }
-
