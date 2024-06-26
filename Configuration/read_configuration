@@ -1,12 +1,5 @@
-BaseURL=https://rok--rokcommqa.sandbox.my.site.com/
-browser=chrome
-username=pihu24@yopmail.com
-password=Aress123$
-SFURL=https://rok--rokcommqa.sandbox.lightning.force.com/
-SFusername=testaress12july@yopmail.com
-SFpassword=Aress@123
-
-
-<listeners>
-<listener class-name="rok.qa.Utilities.ExtentListenerClass"></listener>
-</listeners>
+appiumURL=http://127.0.0.1:4723
+androidAutomationName=UiAutomator2
+androidAppPackage=com.swaglabsmobileapp
+androidAppActivity=com.swaglabsmobileapp.SplashActivity
+androidAppLocation=/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
