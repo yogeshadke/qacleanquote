@@ -1,7 +1,7 @@
 # *Project Name - Clearquote*
 
 
-# QAclearquote Page Objects and Utility
+# Page Objects and Utility
 # Overview
 
 This repository contains classes for automating a mobile application using Appium and the Page Object Model (POM) design pattern. The classes include InspectionPage, HomePage, LoginPage, QaClearquote_baseclass, ExtentListenerClass, and TestClass.
