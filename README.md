@@ -13,7 +13,7 @@ Prerequisites
 Class Overview
 
 The InspectionPage class encapsulates the elements and actions on the Inspection page of the mobile application. It uses the Page Object Model (POM) design pattern to create a clean and maintainable automation framework.
-Methods
+# Methods
 
     InspectionPage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
     void enterLicensePlate(String plate): Enters the license plate and clicks the next button.
