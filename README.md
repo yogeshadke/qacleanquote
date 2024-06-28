@@ -37,3 +37,20 @@ The HomePage class encapsulates the elements and actions on the Home page of the
 
     HomePage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
     void navigateToInspection(): Clicks the inspection icon to navigate to the Inspection page.
+# LoginPage Class
+
+This class represents the page object model for the Login page in a mobile application, using Appium for automation.
+Prerequisites
+
+    Java Development Kit (JDK) installed
+    Appium installed and running
+    Appium Java Client library
+    Selenium Java library
+
+Class Overview
+
+The LoginPage class encapsulates the elements and actions on the Login page of the mobile application. It uses the Page Object Model (POM) design pattern to create a clean and maintainable automation framework.
+# Methods
+
+    LoginPage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
+    void login(String user, String pass): Enters the user ID and password, then clicks the login button.
