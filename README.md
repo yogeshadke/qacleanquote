@@ -1,4 +1,4 @@
-# *Project Clearquote*
+# *Project Name - Clearquote*
 
 
 # QAclearquote Page Objects and Utility
