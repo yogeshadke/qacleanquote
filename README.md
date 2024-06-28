@@ -17,7 +17,7 @@ Prerequisites
 # InspectionPage Class
 
 This class represents the page object model for the Inspection page in a mobile application, using Appium for automation.
-Methods
+# Methods
 
     InspectionPage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
     void enterLicensePlate(String plate): Enters the license plate and clicks the next button.
@@ -28,7 +28,7 @@ Methods
 # HomePage Class
 
 This class represents the page object model for the Home page in a mobile application, using Appium for automation.
-Methods
+# Methods
 
     HomePage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
     void navigateToInspection(): Clicks the inspection icon to navigate to the Inspection page.
@@ -36,7 +36,7 @@ Methods
 # LoginPage Class
 
 This class represents the page object model for the Login page in a mobile application, using Appium for automation.
-Methods
+# Methods
 
     LoginPage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
     void login(String user, String pass): Enters the user ID and password, then clicks the login button.
@@ -44,7 +44,7 @@ Methods
 # QaClearquote_baseclass
 
 The QaClearquote_baseclass class provides the basic setup and teardown functionalities for running Appium-based automated tests on an Android application.
-Methods
+# Methods
 
     setup(): Initializes the Appium driver with the desired capabilities for the Android emulator and application.
     teardown(): Quits the driver if it is not null, cleaning up the session after the tests.
@@ -52,7 +52,7 @@ Methods
 # ExtentListenerClass
 
 The ExtentListenerClass is a TestNG listener class that implements the ITestListener interface. It provides methods to perform actions at various stages of the test execution lifecycle, such as on test start, success, failure, and finish.
-Methods
+# Methods
 
     onTestStart(ITestResult result): Logs the start of a test.
     onTestSuccess(ITestResult result): Logs the successful execution of a test.
@@ -65,7 +65,7 @@ Methods
 # TestClass
 
 The TestClass is a TestNG test class that automates the process of logging in, navigating to the inspection page, and completing a vehicle inspection using Appium. It extends the QaClearquote_baseclass to utilize the setup and teardown methods for initializing and quitting the Appium driver.
-Methods
+# Methods
 
     setUp(): Sets up the Appium driver and initializes the page objects.
     testVehicleInspection(): Automates the process of logging in, navigating to the inspection page, and completing a vehicle inspection.
