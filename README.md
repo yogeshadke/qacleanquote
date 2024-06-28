@@ -1,6 +1,6 @@
 # qacleanquote
-QAclearquote Page Objects
-InspectionPage Class
+# QAclearquote Page Objects
+# InspectionPage Class
 
 This class represents the page object model for the Inspection page in a mobile application, using Appium for automation.
 Prerequisites
@@ -10,6 +10,13 @@ Prerequisites
     Appium Java Client library
     Selenium Java library
 
-Class Overview
+# Class Overview
 
 The InspectionPage class encapsulates the elements and actions on the Inspection page of the mobile application. It uses the Page Object Model (POM) design pattern to create a clean and maintainable automation framework.
+Methods
+
+    InspectionPage(AppiumDriver driver): Constructor that initializes the elements on the page using AppiumFieldDecorator.
+    void enterLicensePlate(String plate): Enters the license plate and clicks the next button.
+    void selectVehicleDetails(): Selects vehicle make and model, then clicks the next button.
+    void captureFrontViewImage(): Clicks the button to capture an image and confirms the action.
+    void completeInspection(): Completes the inspection process by clicking the complete inspection button.
